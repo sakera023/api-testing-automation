@@ -1,24 +1,28 @@
 # API Testing Automation
 
-This project automates API testing using Python and the requests library. It tests basic CRUD operations on a public mock API.
+This project demonstrates automated REST API testing with Python, Requests, and Pytest against JSONPlaceholder's public mock API.
 
-## Features
-- GET, POST, PUT, DELETE request testing
-- JSON response validation
-- Simple assertions and status code checks
-- Pytest integration
+## Coverage
 
-## Tools
-- Python, requests, pytest
+- GET collection validation
+- POST response validation
+- PUT response validation
+- DELETE status validation
+- Explicit request timeouts to prevent hanging test runs
+- Automated tests on Python 3.11 and 3.12
 
 ## Setup
 
-```bash
-pip install -r requirements.txt
-```
-
-## Run Tests
+Python 3.11 or newer is recommended.
 
 ```bash
-pytest tests/
+python -m pip install -r requirements.txt
 ```
+
+## Run tests
+
+```bash
+pytest -q
+```
+
+The tests require internet access and depend on the availability of `jsonplaceholder.typicode.com`; they do not modify persistent remote data.
